@@ -6,7 +6,7 @@ app.use(helmet.contentSecurityPolicy({
   directives: {
     defaultSrc: ["'self'"],
     imgSrc: ["'self'"],
-    fontSrc: ["'*'"]
+    fontSrc: ["'*'"],
     styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com']
   }
 }))
