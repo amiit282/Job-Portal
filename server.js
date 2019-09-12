@@ -4,10 +4,10 @@ const helmet = require('helmet')
 
 app.use(helmet.contentSecurityPolicy({
   directives: {
-    defaultSrc: ["'self'"],
-    imgSrc: ["'self'"],
+    defaultSrc: ["'*'"],
+    imgSrc: ["'*'"],
     fontSrc: ["'*'"],
-    styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com']
+    styleSrc: ["'*'", 'maxcdn.bootstrapcdn.com']
   }
 }))
 app.use(express.static(__dirname + '/dist'));
