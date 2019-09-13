@@ -4,14 +4,7 @@ const path = require('path');
 const helmet = require('helmet')
 const favicon = require('serve-favicon')
 
-app.use(helmet.contentSecurityPolicy({
-  directives: {
-    "default-src": ["'*'"],
-    "img-src": ["'*'"],
-    "font-src": ["'*'"],
-    "style-src": ["'*'", 'maxcdn.bootstrapcdn.com']
-  }
-}))
+
 
 app.use(express.static(__dirname, './dist/jobportal'));
 app.use(favicon(path.join(__dirname, './dist/jobportal', 'favicon.ico')))
