@@ -11,10 +11,11 @@ app.use(helmet.contentSecurityPolicy({
     "style-src": ["'*'", 'maxcdn.bootstrapcdn.com']
   }
 }))
-app.use(express.static(__dirname + '/dist/jobportal'));
+
+app.use(express.static(__dirname + './dist/jobportal'));
 
 app.listen(process.env.PORT || 8080)
 
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname + '/dist/jobportal/index.html'));
+  res.sendFile(path.join(__dirname + './dist/jobportal/index.html'));
 });
