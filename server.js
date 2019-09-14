@@ -6,10 +6,10 @@ const favicon = require('serve-favicon')
 
 
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'dist', 'jobportal')));
 
-app.get('/*', function (req, res) {
+app.get('*', function (req, res) {
   console.log('Redirect method');
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+  res.sendFile(path.join(__dirname, 'dist', 'jobportal', 'index.html'));
 });
 app.listen(process.env.PORT || 8080)
