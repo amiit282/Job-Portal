@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const helmet = require('helmet')
-const favicon = require('serve-favicon')
+const bodyParser = require('body-parser');
 
+app.use(bodyParser.json())
 
 
 app.use(express.static(path.join(__dirname, 'dist', 'jobPortal')));
